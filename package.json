@@ -127,6 +127,7 @@
     "lodash.merge": "^4.6.2",
     "process": "^0.11.10",
     "react": "^18.2.0",
+    "react-admin": "^4.15.2",
     "react-dom": "^18.2.0",
     "react-i18next": "^11.18.3",
     "react-redux": "^8.0.2",
