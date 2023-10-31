@@ -27,7 +27,9 @@ const ContextMenu = loadable(() =>
 const Image = loadable(() =>
   import(/* webpackChunkName: "ContextMenuChunk" */ "Pages/image/image")
 );
-
+const Users = loadable(() =>
+  import(/* webpackChunkName: "ContextMenuChunk" */ "Pages/users/users")
+);
 class AppRoutes extends React.Component {
   render() {    
     return (
@@ -39,6 +41,7 @@ class AppRoutes extends React.Component {
         <Route path={ROUTES.UNDOREDO} element={<UndoRedo />}></Route>
         <Route path={ROUTES.CONTEXTMENU} element={<ContextMenu />}></Route>
         <Route path={ROUTES.IMAGE} element={<Image />}></Route>
+        <Route path={ROUTES.USERS} element={<Image />}></Route>
       </Routes>
     );
   }

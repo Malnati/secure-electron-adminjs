@@ -29,6 +29,7 @@ class Welcome extends React.Component {
               <Link to={ROUTES.UNDOREDO}>Undo/redoing actions.</Link> <br />
               <Link to={ROUTES.CONTEXTMENU}>Custom context menu.</Link> <br />
               <Link to={ROUTES.IMAGE}>Sample image loaded.</Link> <br />
+              <Link to={ROUTES.USERS}>Sample users loaded from DS.</Link> <br />
             </div>
           </div>
         </section>
