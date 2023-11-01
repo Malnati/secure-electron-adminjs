@@ -41,7 +41,7 @@ class AppRoutes extends React.Component {
         <Route path={ROUTES.UNDOREDO} element={<UndoRedo />}></Route>
         <Route path={ROUTES.CONTEXTMENU} element={<ContextMenu />}></Route>
         <Route path={ROUTES.IMAGE} element={<Image />}></Route>
-        <Route path={ROUTES.USERS} element={<Image />}></Route>
+        <Route path={ROUTES.USERS} element={<Users />}></Route>
       </Routes>
     );
   }
