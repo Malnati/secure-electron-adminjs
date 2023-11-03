@@ -7,6 +7,7 @@
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
     "audit-app": "npx electronegativity -i ./ -x LimitNavigationGlobalCheck,PermissionRequestHandlerGlobalCheck",
+    "clean": "rm -rf ./node_modules && npm install -y && npm run dev",
     "translate": "node ./app/localization/translateMissing.js",
     "dev-server": "cross-env NODE_ENV=development webpack serve --config ./webpack.development.js > dev-scripts/webpack-dev-server.log 2> dev-scripts/webpack-dev-server-error.log",
     "dev": "concurrently --success first \"node dev-scripts/prepareDevServer.js\" \"node dev-scripts/launchDevServer.js\" -k",
@@ -117,6 +118,7 @@
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "@reduxjs/toolkit": "^1.8.3",
+    "adminjs": "^7.3.0",
     "axios": "^1.6.0",
     "bulma": "^0.9.4",
     "easy-redux-undo": "^1.0.5",
@@ -124,6 +126,7 @@
     "i18next": "^21.8.14",
     "i18next-electron-fs-backend": "^3.0.0",
     "i18next-fs-backend": "^1.1.4",
+    "js-cookie": "^3.0.5",
     "lodash": "4.17.21",
     "lodash.merge": "^4.6.2",
     "process": "^0.11.10",

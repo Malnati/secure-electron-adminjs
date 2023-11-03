@@ -6,5 +6,5 @@
   "UNDOREDO": "/undoredo",
   "CONTEXTMENU": "/contextmenu",
   "IMAGE": "/image",
-  "USERS": "/users"
+  "USERS": "/users/*/*"
 }

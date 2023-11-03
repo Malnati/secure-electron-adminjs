@@ -1,22 +1,22 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
-const find = (args, resolve, failback) => {
-    const token = Cookies.getCookie('token');
+const find = (args) => {
+    const token = Cookies.get('token');
     const URL = "https://jsonplaceholder.typicode.com/users/2";
-    const { data } = axios.get(URL, {
+    return axios.get(URL, {
         headers: {
             Authorization: `Bearer ${token}`
         }
     }).then(function (response) {
-        return resolve(response);
+        return response.data;  // Retornar os dados da resposta
     }).catch(function (error) {
-        return failback(error);
+        throw error;  
     });
-    return data;
 }
 
-const UsersProvider = {
-    find
+export const UsersProvider = {
+  find
 }
 
 export default UsersProvider;
