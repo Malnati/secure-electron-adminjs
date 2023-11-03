@@ -16,8 +16,10 @@ module.exports = {
     fallback: {
       "crypto": require.resolve("crypto-browserify"),
       "buffer": require.resolve("buffer/"),
+      "stream": require.resolve("stream-browserify"),
+      "fs": false,
       "path": require.resolve("path-browserify"),
-      "stream": require.resolve("stream-browserify")
+      "i18next-electron-fs-backend": require.resolve("i18next-electron-fs-backend")
     }
   },
   module: {

@@ -1,5 +1,4 @@
 const { contextBridge, ipcRenderer } = require("electron");
-const fs = require("fs");
 const i18nextBackend = require("i18next-electron-fs-backend");
 const Store = require("secure-electron-store").default;
 const ContextMenu = require("secure-electron-context-menu").default;
@@ -14,5 +13,10 @@ contextBridge.exposeInMainWorld("api", {
   i18nextElectronBackend: i18nextBackend.preloadBindings(ipcRenderer, process),
   store: store.preloadBindings(ipcRenderer, fs),
   contextMenu: ContextMenu.preloadBindings(ipcRenderer),
-  licenseKeys: SecureElectronLicenseKeys.preloadBindings(ipcRenderer)
-});
+  licenseKeys: SecureElectronLicenseKeys.preloadBindings(ipcRenderer),
+  fs: {readFileSync: (path, encoding) => fs.readFileSync(path, encoding)}
+}); 
+
+window.api.readFile = async path => {
+  return await ipcRenderer.invoke('read-file', path);
+};

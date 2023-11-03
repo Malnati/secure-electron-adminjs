@@ -1,0 +1,62 @@
+#!/bin/bash
+
+libraries=(
+  react
+  react-dom
+  electron
+  redux
+  @reduxjs/toolkit
+  react-redux
+  react-router
+  react-router-dom
+  @loadable/component
+  electron-devtools-installer
+  i18next
+  i18next-electron-fs-backend
+  react-i18next
+  redux-first-history
+  secure-electron-context-menu
+  secure-electron-license-keys
+  secure-electron-store
+  @babel/core
+  @babel/plugin-syntax-dynamic-import
+  @babel/plugin-transform-react-jsx
+  @babel/preset-env
+  @babel/preset-react
+  @babel/preset-typescript
+  typescript
+  webpack
+  webpack-cli
+  webpack-dev-server
+  webpack-merge
+  babel-loader
+  css-loader
+  css-minimizer-webpack-plugin
+  html-loader
+  html-webpack-plugin
+  mini-css-extract-plugin
+  mocha
+  spectron
+  bulma
+  easy-redux-undo
+  lodash
+  lodash.merge
+  @google-cloud/translate
+  @doyensec/electronegativity
+  cross-env
+  concurrently
+  csp-html-webpack-plugin
+  electron-builder
+  electron-debug
+  buffer
+  crypto-browserify
+  path-browserify
+  process
+  stream-browserify
+)
+
+for library in "${libraries[@]}"
+do
+  latest_version=$(npm show "$library" version)
+  echo " $library: $latest_version"
+done
