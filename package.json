@@ -118,7 +118,6 @@
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "@reduxjs/toolkit": "^1.8.3",
-    "adminjs": "^7.3.0",
     "axios": "^1.6.0",
     "bulma": "^0.9.4",
     "easy-redux-undo": "^1.0.5",
@@ -131,7 +130,6 @@
     "lodash.merge": "^4.6.2",
     "process": "^0.11.10",
     "react": "^18.2.0",
-    "react-admin": "^4.15.2",
     "react-dom": "^18.2.0",
     "react-i18next": "^11.18.3",
     "react-redux": "^8.0.2",
